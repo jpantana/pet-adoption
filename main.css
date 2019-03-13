@@ -1,3 +1,44 @@
+* {
+    padding: 10px;
+    margin: 0;
+}
+
 body {
-    background-color: lightblue;
+    background-color: transparent;
+}
+
+
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+   
+}
+
+.btn {
+    margin: 30px;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: .8em;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .7s;
+}
+
+#catsBtn {
+background-color:rgb(90, 192, 223);
+}
+
+#dogsBtn {
+    background-color: rgb(92, 184, 92);
+}
+
+#dinosBtn {
+    background-color: rgb(240, 174, 78);
 }
