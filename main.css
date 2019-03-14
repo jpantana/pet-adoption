@@ -31,18 +31,40 @@ body {
     transition: .7s;
 }
 
-#catsBtn {
+#cat {
 background-color:rgb(90, 192, 223);
 }
 
-#dogsBtn {
+#dog {
     background-color: rgb(92, 184, 92);
 }
 
-#dinosBtn {
+#dino {
     background-color: rgb(240, 174, 78);
 }
 
-#allBtn {
+#all {
     background-color: rgb(240, 78, 78);
+}
+
+
+
+/* cards section */
+.cards-container {
+    display: flex;
+    flex-flow: wrap row;
+    align-content: center;
+}
+
+.card {
+    max-width: 250px;
+    max-height: 300px;
+    min-width: 250px;
+    min-height: 300px;
+    border: 1px solid black;
+    flex-flow: wrap row;
+}
+
+.petImg {
+    width: 30%;
 }

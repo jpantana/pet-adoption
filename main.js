@@ -1,7 +1,5 @@
-console.log('hi');
-
-
 const pets = [
+
     {
       name: "Dusty",
       color: "Green",
@@ -213,3 +211,59 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+
+const printToDom = (divId, textToPrint) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML = textToPrint;
+};
+
+
+const domBuilder = (pets) => {
+    let domString = ``;
+    pets.forEach((pet) => {
+        domString += `<div class="card">`;
+        domString +=    `<h1 class="petName">${pet.name}</h1>`;
+        domString +=        `<img class="petImg" src="${pet.imageUrl}" alt="picture of ${pet.name}, who is a ${pet.type}.>`;
+        domString +=        `<h3 class="petColor">${pet.color}</h3>`;
+        domString +=        `<p class="petSkill">${pet.specialSkill}</p>`;
+        domString +=    `<h2 class="petType">${pet.type}</h2>`;
+        domString += `</div>`;
+    });
+    printToDom('cards-container', domString);
+};
+
+
+
+const buttonClick = (e) => {
+    const buttonId = e.target.id;
+    const selectedPets = [];
+    pets.forEach((pet) => {
+        if (pet.type === buttonId) {
+            selectedPets.push(pet);
+        };
+    });
+    if (buttonId === 'all') {
+        domBuilder(pets);
+    } else {
+        domBuilder(selectedPets);
+    };
+};
+
+
+const buttonEvents = () => {
+      console.log('testing testing');
+       document.getElementById('cat').addEventListener('click', buttonClick);
+       document.getElementById('dog').addEventListener('click', buttonClick); 
+       document.getElementById('dino').addEventListener('click', buttonClick);
+       document.getElementById('all').addEventListener('click', buttonClick);
+};
+
+
+
+
+const init = () => {
+    buttonEvents();
+    domBuilder(pets);
+};
+init();
