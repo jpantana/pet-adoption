@@ -131,7 +131,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: "https://tailandfur.com/wp-content/uploads/2016/03/40-Scary-and-Funny-Cat-Pictures-8.jpg"
     },
     {
       name: "Spooky",
@@ -201,7 +201,7 @@ const pets = [
       color: "Green",
       specialSkill: "Gives hugs with appropriate pressure and for the right length of time.",
       type: "cat",
-      imageUrl: "http://img.izismile.com/img/img2/20090219/cats_02.jpg"
+      imageUrl: "https://tailandfur.com/wp-content/uploads/2016/03/40-Scary-and-Funny-Cat-Pictures-8.jpg"
     },
     {
       name: "Lucy",
@@ -225,7 +225,7 @@ const domBuilder = (placeHolder) => {
         domString += `<div class="card">`;
         domString +=    `<h1 class="petName">${pet.name}</h1>`;
         domString +=        `<img class="petImg" src="${pet.imageUrl}" alt="picture of ${pet.name}, who is a ${pet.type}.>`;
-        domString +=        `<h3 class="petColor"><strong>Pet Color:</strong> ${pet.color}</h3>`;
+        domString +=        `<h3 class="petColor">${pet.color}</h3>`;
         domString +=        `<p class="petSkill">${pet.specialSkill}</p>`;
                 if (pet.type === 'cat') {
                   domString += `<h2 class="petType" id="catColor">${pet.type}</h2>`;
