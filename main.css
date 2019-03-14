@@ -7,13 +7,34 @@ body {
     background-color: transparent;
 }
 
+#bannerImg {
+    display: flex;
+    flex-flow: nowrap row;
+    margin: auto;
+    justify-content: space-between;
+}
 
+#silDino {
+    width: 150px;
+    height: 100px;
+
+}
+
+#silDog {
+    width: 100px;
+    height: 100px;
+
+}
+
+#silCat {
+    width: 100px;
+    height: 100px;
+}
 
 #buttons {
     display: flex;
     justify-content: center;
     margin: 20px;
-   
 }
 
 .btn {
@@ -47,24 +68,91 @@ background-color:rgb(90, 192, 223);
     background-color: rgb(240, 78, 78);
 }
 
+/* div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+} */
 
 
 /* cards section */
-.cards-container {
+#cards-container {
+    margin: auto;
     display: flex;
-    flex-flow: wrap row;
-    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: flex-start;
+    justify-content: space-between;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
+    
 }
 
 .card {
-    max-width: 250px;
-    max-height: 300px;
+    margin: 30px;
     min-width: 250px;
-    min-height: 300px;
-    border: 1px solid black;
-    flex-flow: wrap row;
+    max-width: 250px;
+    /* max-height: 300px;
+    min-height: 300px; */
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    border: .5px solid #eee;
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#catColor {
+    background-color:rgb(90, 192, 223); 
+    color: rgb(0, 102, 255);
+}
+
+#dogColor {
+    background-color: rgb(92, 184, 92);
+    color: rgb(4, 89, 4);
+}
+
+#dinoColor {
+    background-color: rgb(240, 174, 78);
+    color: rgb(177, 116, 2);
+}
+
+.petName {
+    background-color: rgb(24, 224, 212);
+    background-color: #4fc3f7;
+    color: white;
+    border-radius: 4px;
+    margin: 0;
+    font-family: 'Sniglet', cursive;
 }
 
 .petImg {
-    width: 30%;
+    width: 45%;
+    width: 45%;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px;  
+}
+
+.petColor {
+    line-height: 10px;  
+}
+
+.petSkill {
+    text-align: center;
+    padding: 10px;  
+    height: 40px;
+    font-size: .8em;
+}
+
+.petType {
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
