@@ -5,6 +5,7 @@
 
 body {
     background-color: transparent;
+    
 }
 
 
@@ -13,7 +14,6 @@ body {
     display: flex;
     justify-content: center;
     margin: 20px;
-   
 }
 
 .btn {
@@ -47,24 +47,82 @@ background-color:rgb(90, 192, 223);
     background-color: rgb(240, 78, 78);
 }
 
+/* div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+} */
 
 
 /* cards section */
-.cards-container {
+#cards-container {
+    margin: auto;
     display: flex;
-    flex-flow: wrap row;
-    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: flex-start;
+    justify-content: space-between;
+    justify-content: center;
+    
 }
 
 .card {
-    max-width: 250px;
-    max-height: 300px;
+    margin: 30px;
     min-width: 250px;
-    min-height: 300px;
-    border: 1px solid black;
-    flex-flow: wrap row;
+    max-width: 250px;
+    /* max-height: 300px;
+    min-height: 300px; */
+    padding: 0px;
+    background-color: #eee;
+    /* border: 1px solid grey; */
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    /* font-size: 1em; */
+    text-align: center;
+}
+
+#catColor {
+    background-color:rgb(90, 192, 223); 
+    color: rgb(0, 102, 255);
+}
+
+#dogColor {
+    background-color: rgb(92, 184, 92);
+    color: rgb(4, 89, 4);
+}
+
+#dinoColor {
+    background-color: rgb(240, 174, 78);
+    color: rgb(177, 116, 2);
+}
+
+.petName {
+    background-color: lightblue;
+    color: white;
+    border-radius: 4px;
+    margin: 0
 }
 
 .petImg {
-    width: 30%;
+    width: 45%;
+    display: block; 
+    margin: auto;
+    border: 2px solid grey;
+    padding: 5px;   
+}
+
+.petColor {
+    text-align: center;
+}
+
+.petSkill {
+    text-align: center;
+    padding: 10px;  
+}
+
+.petType {
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
 }

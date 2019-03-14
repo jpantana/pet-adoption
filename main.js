@@ -219,20 +219,27 @@ const printToDom = (divId, textToPrint) => {
 };
 
 
-const domBuilder = (pets) => {
+const domBuilder = (placeHolder) => {
     let domString = ``;
-    pets.forEach((pet) => {
+    placeHolder.forEach((pet) => {
         domString += `<div class="card">`;
         domString +=    `<h1 class="petName">${pet.name}</h1>`;
         domString +=        `<img class="petImg" src="${pet.imageUrl}" alt="picture of ${pet.name}, who is a ${pet.type}.>`;
-        domString +=        `<h3 class="petColor">${pet.color}</h3>`;
+        domString +=        `<h3 class="petColor"><strong>Pet Color:</strong> ${pet.color}</h3>`;
         domString +=        `<p class="petSkill">${pet.specialSkill}</p>`;
-        domString +=    `<h2 class="petType">${pet.type}</h2>`;
+                if (pet.type === 'cat') {
+                  domString += `<h2 class="petType" id="catColor">${pet.type}</h2>`;
+                }
+                else if(pet.type === 'dog') {
+                  domString += `<h2 class="petType" id="dogColor">${pet.type}</h2>`;
+                }
+                else if(pet.type === 'dino') {
+                  domString += `<h2 class="petType" id="dinoColor">${pet.type}</h2>`;
+                }
         domString += `</div>`;
     });
     printToDom('cards-container', domString);
 };
-
 
 
 const buttonClick = (e) => {
@@ -252,14 +259,11 @@ const buttonClick = (e) => {
 
 
 const buttonEvents = () => {
-      console.log('testing testing');
        document.getElementById('cat').addEventListener('click', buttonClick);
        document.getElementById('dog').addEventListener('click', buttonClick); 
        document.getElementById('dino').addEventListener('click', buttonClick);
        document.getElementById('all').addEventListener('click', buttonClick);
 };
-
-
 
 
 const init = () => {
