@@ -5,10 +5,31 @@
 
 body {
     background-color: transparent;
-    
 }
 
+#bannerImg {
+    display: flex;
+    flex-flow: nowrap row;
+    margin: auto;
+    justify-content: space-between;
+}
 
+#silDino {
+    width: 150px;
+    height: 100px;
+
+}
+
+#silDog {
+    width: 100px;
+    height: 100px;
+
+}
+
+#silCat {
+    width: 100px;
+    height: 100px;
+}
 
 #buttons {
     display: flex;
@@ -63,6 +84,10 @@ background-color:rgb(90, 192, 223);
     flex-direction: flex-start;
     justify-content: space-between;
     justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
     
 }
 
@@ -113,12 +138,10 @@ background-color:rgb(90, 192, 223);
     border: 1px solid #eee;
     border-radius: 5px;
     padding: 5px;  
-     
 }
 
 .petColor {
     line-height: 10px;  
-    
 }
 
 .petSkill {
